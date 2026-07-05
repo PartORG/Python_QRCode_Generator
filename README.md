@@ -1,137 +1,91 @@
 # QR Code Generator
 
-Create and customize QR codes with ease using this Python library. Perfect for developers looking to integrate QR code generation into their projects quickly and efficiently.
+A simple and efficient QR code generator written in Python. This project allows you to easily create QR codes for various purposes, such as URLs, text, and more.
 
-[![Python](https://img.shields.io/badge/python-3.x-blue.svg)] [![License](https://img.shields.io/badge/license-MIT-green.svg)] [![Package Manager](https://img.shields.io/badge/package-manager-pip-orange.svg)]
-
-## Introduction
-
-QR Code Generator is a Python library designed to simplify the process of creating QR codes. Whether you need to generate QR codes for URLs, text, or other data, this tool has got you covered. It provides a straightforward and user-friendly interface, making it accessible even for those new to programming.
-
-The primary workflow involves installing the library, configuring any necessary settings (if any), and then using the provided functions to generate QR codes. The generated QR codes can be saved as image files or used directly in your applications.
+## Table of Contents
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Technology Stack](#technology-stack)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
 
 ## Features
 
-### Easy Installation
-
-QR Code Generator is easy to install via pip:
-
-```bash
-pip install python-qrcode-generator
-```
-
-### Customizable QR Codes
-
-Generate QR codes with various customization options, such as setting the error correction level and choosing the color of the QR code.
-
-### Save as Image
-
-Save generated QR codes as PNG or JPEG files for use in your projects.
+### QR Code Generator
+- **What it does:** Generates QR codes from text or URLs.
+- **Why it exists:** To provide a quick and easy way to create QR codes without the need for complex libraries.
+- **Why it is useful:** Ideal for developers, marketers, and anyone who needs to quickly generate QR codes for various applications.
 
 ## How It Works
 
-QR Code Generator uses the `qrcode` library to create QR codes. The workflow involves importing the necessary modules and using the provided functions to generate and save QR codes.
-
-Here's a basic example of how to use the library:
-
-```python
-import qrcode
-
-# Create a QR code instance
-qr = qrcode.QRCode(
-    version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_L,
-    box_size=10,
-    border=4,
-)
-
-# Add data to the QR code
-qr.add_data('https://www.example.com')
-qr.make(fit=True)
-
-# Create an image from the QR Code instance
-img = qr.make_image(fill_color="black", back_color="white")
-
-# Save the image
-img.save("sample.png")
-```
+The QR code generator is implemented in Python. The primary entry point for the application is `main.py`. You can run this script to generate a QR code based on the input provided.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
-| Python     | The programming language used for development. |
-| qrcode     | The library used to generate QR codes. |
+| Python     | Main programming language used for generating QR codes. |
 
 ## Requirements
-
-- Python 3.x
+- Python 3.x (Python version not detected in repository)
 
 ## Installation
 
-To install the QR Code Generator library, run:
+To install and use the QR Code Generator, follow these steps:
 
-```bash
-pip install python-qrcode-generator
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/PartORG/Python_QRCode_Generator.git
+   ```
 
-## Configuration
+2. Navigate to the project directory:
+   ```sh
+   cd Python_QRCode_Generator
+   ```
 
-No configuration is required for this library.
-
-## Quick Start
-
-Here's a quick example of how to generate and save a QR code:
-
-```python
-import qrcode
-
-# Create a QR code instance
-qr = qrcode.QRCode(
-    version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_L,
-    box_size=10,
-    border=4,
-)
-
-# Add data to the QR code
-qr.add_data('https://www.example.com')
-qr.make(fit=True)
-
-# Create an image from the QR Code instance
-img = qr.make_image(fill_color="black", back_color="white")
-
-# Save the image
-img.save("sample.png")
-```
+3. Run the QR code generator:
+   ```sh
+   python main.py
+   ```
 
 ## Usage
 
-To use the QR Code Generator library in your project, simply import it and follow the example above.
+To generate a QR code, you can run the script with the desired input:
+
+```sh
+python main.py "https://www.example.com"
+```
+
+This will create a QR code for the URL `https://www.example.com` and save it as `sample.png`.
 
 ## Project Structure
 
-```plaintext
-.
+```
+Python_QRCode_Generator/
 ├── README.md
-└── main.py
+├── main.py
+└── sample.png
 ```
 
-- `README.md`: This file contains the documentation for the project.
-- `main.py`: The entry point of the project, demonstrating how to use the QR Code Generator library.
+- **README.md:** This file.
+- **main.py:** The primary script for generating QR codes.
+- **sample.png:** A sample QR code image.
 
 ## Development
 
-No development workflow is provided at this time.
+No development workflow is specified in the repository. You can modify and extend the functionality of `main.py` as needed.
 
 ## Testing
 
-No tests are available for this project.
+No tests are included in this repository.
 
 ## Limitations
 
-This library does not support advanced customization options beyond those provided by the `qrcode` library. For more complex needs, consider using other libraries or tools.
+- No runtime dependencies mentioned.
+- The repository does not specify a runtime environment.
 
 ## License
 
-QR Code Generator is licensed under the MIT license. See the [LICENSE](LICENSE) file for details.
+Not detected
